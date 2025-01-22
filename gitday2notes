@@ -1,0 +1,102 @@
+BRANCHES:
+It's an individual line of development for code.
+we create different branches in real-time.
+each developer will work on their own branch.
+At the end we will combine all branches together on GitHub.
+Default branch is Master.
+Common Branches: Master, Main, Release, Hot-fix -------
+ 
+
+git branch        : to list the branches
+git branch movies    : to create a new branch
+git checkout movies    : to switch from one branch to another.
+git checkout -b recharge: to create and switch from one branch to another.
+git branch -m old new    : to rename a branch
+git branch -D movies    : to delete a branch
+
+we cant delete the current branch
+
+PROCESS:
+
+git branch        
+git branch movies    
+git checkout movies
+touch movies{1..5}
+git status
+git add movies*
+git commit -m "dev-1 commits" movies*
+
+
+git remote add origin https://github.com/revathisiriki78/paytm.git
+git push origin master
+username:
+password:
+
+git push origin movies
+username:
+password:
+
+
+git branch dth    
+git checkout dth
+touch dth{1..5}
+git status
+git add dth*
+git commit -m "dev-2 commits" dth*
+
+git push origin dth
+username:
+password:
+
+
+git checkout -b train
+touch train{1..5}
+git add train*
+git commit -m "dev-3 commits" train*
+
+git push origin train
+username:
+password:
+
+
+git checkout -b recharge
+touch recharge{1..5}
+git add recharge*
+git commit -m "dev-4 commits" recharge*
+
+git push origin recharge
+username:
+password:
+
+TO MERGE BRANCHES IN GITHUB WE NEED TO CREATE PULL REQUEST
+
+PULL REQUEST -- > CREATE NEW PULL REQUEST -- > SELECT MOVIES -- > CREATE --> MERGE -- > CONFIRM
+
+
+GIT MERGE: it will merge files blw two different branches
+
+git checkout master
+git merge movies
+git merge train
+
+
+GIT REBASE: used to add files blw two different branches
+git checkout master
+git rebase dth
+git rebase recharge
+
+
+MERGE VS REBASE:
+merge for public repos, rebase for private
+merge stores history, rebase will not store the entire history
+merge will show files, rebase will not show files
+
+
+in GitHub we use Pull Request (PR) to do merging.
+
+
+GIT REVERT: used to revert(get back) the files we merge.
+to undo merge we can use revert.
+
+git revert dth
+git revert recharge
